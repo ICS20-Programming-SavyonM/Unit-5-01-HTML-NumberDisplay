@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <!--metadata-->
+    <meta charset="utf-8">
+    <meta name="description" content="User Input, with JavaScript">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Savyon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   <!--for favicon on this page-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png" />
+    <link rel="manifest" href="./fav_index/site.webmanifest" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    
+    <!--style on this page-->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Number Display</title>
+  </head>
+  <body>
+    <script src="./js/script.js"></script>
+	  
+    <h1>Number Display</h1>
+		<h3>This program will display all numbers from  0 up to your number:</h3>
+    
+    <!--area for user to enter number-->
+		<table>
+			<tr align = "center">
+				<td valign="top" align="right">					
+					<form action="javascript:displayNumbers()">						
+						<label for="userNum">Enter a Number:</label>
+						<input type="number" step="1" min="0" id="userNum"><br><br>		
+						
+						<input type="submit" value="Display Numbers">
+					</form>
+				</td>
+				<td valign="top" align="left">
+          
+          <!--image on this page-->
+					<img src="./images/numbers.jpg" alt="Numbers" width="40%">
+				</td>
+			</tr>
+		</table>
+    
+		<!-- Create a space where the user information will be displayed -->
+		<div id="display-results">			
+		</div>
+	
+  </body>
+</html>
