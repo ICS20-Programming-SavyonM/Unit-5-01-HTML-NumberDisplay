@@ -10,26 +10,24 @@
  * This function displays all numbers from 0 up to the user number
  */
 function displayNumbers() {
+  var min = parseInt(document.getElementById("minInput").value);
+  var max = parseInt(document.getElementById("maxInput").value);
+  var output = document.getElementById("output");
   
-  	// initialize the counter to 0
-	let counter = 0
+  if (isNaN(min) || isNaN(max)) {
+    output.textContent = "Please enter valid numbers.";
+    return;
+  }
   
-	// initalize numbers as an empty string
-	let numbers = ""
-	
-	// get the user number
-	let userNum = parseInt(document.getElementById('userNum').value)	
-
-	// use a while loop to display the numbers from 0 up to the user number
-	while (counter <= userNum) {
-    
-		// build the string of numbers with a line break each time
-		numbers = numbers + counter + "<br>"
-    
-		// increment the counter
-		counter = counter +1
-	}
-	
-  	// return the string of numbers back to html
-  	document.getElementById('display-results').innerHTML = numbers
+  if (min > max) {
+    output.textContent = "Minimum number should be less than or equal to the maximum number.";
+    return;
+  }
+  
+  var numbers = [];
+  for (var i = min; i <= max; i++) {
+    numbers.push(i);
+  }
+  
+  output.textContent = "Numbers: " + numbers.join(", ");
 }
