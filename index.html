@@ -19,24 +19,25 @@
     <!--Style on this page-->
     <link rel="stylesheet" href="./css/style.css">
   
-  <title>Number Range Display</title>
+  <title>Number Display</title>
    <script src="./js/script.js"></script>
 </head>
 <body>
   <h1>Number Range Display</h1>
 
   <!--area for user to enter numbers-->
-  <label for="minInput">Minimum Number:</label>
-  <input type="number" id="minInput">
-</br></br>
-  <label for="maxInput">Maximum Number:</label>
-  <input type="number" id="maxInput">
-  </br></br>
-  <button onclick="displayNumbers()">Display Numbers</button>
+<label for="minInput">Minimum Number:</label>
+<input type="number" id="minInput" step="1">
+<br></br>
+<label for="maxInput">Maximum Number:</label>
+<input type="number" id="maxInput" step="1">
+<br></br>
+<button onclick="displayNumbers()">Display Numbers</button>
+
   
   <!--image on this page-->
           <td valign="top" align="center">
-            <img src="./images/numbers.jpg" alt="Museum" width="30%">
+            <img src="./images/numbers.jpg" alt="numbers" width="30%">
           </td>
   
   <div id="output"></div>
